@@ -1,7 +1,7 @@
 package api
 
 import (
-	"beowulf-go/transports"
+	"github.com/thanhxeon2470/beowulf-go/transports"
 	"encoding/json"
 )
 

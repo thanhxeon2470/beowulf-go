@@ -1,7 +1,7 @@
 package transactions
 
 import (
-	"beowulf-go/transactions/rfc6979"
+	"github.com/thanhxeon2470/beowulf-go/transactions/rfc6979"
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/sha256"

@@ -1,7 +1,7 @@
 package types
 
 import (
-	"beowulf-go/encoding/transaction"
+	"github.com/thanhxeon2470/beowulf-go/encoding/transaction"
 )
 
 //AccountSupernodeVoteOperation represents account_supernode_vote operation data.

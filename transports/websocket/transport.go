@@ -1,7 +1,7 @@
 package websocket
 
 import (
-	"beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/websocket"

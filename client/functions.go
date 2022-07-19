@@ -1,10 +1,10 @@
 package client
 
 import (
-	"beowulf-go/api"
-	"beowulf-go/config"
-	"beowulf-go/transactions"
-	"beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/api"
+	"github.com/thanhxeon2470/beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/transactions"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	"encoding/json"
 	"errors"
 	"fmt"

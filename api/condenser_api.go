@@ -1,9 +1,9 @@
 package api
 
 import (
-	"beowulf-go/transports"
-	"beowulf-go/types"
-	_ "beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/transports"
+	"github.com/thanhxeon2470/beowulf-go/types"
+	_ "github.com/thanhxeon2470/beowulf-go/types"
 	"encoding/json"
 	"github.com/pkg/errors"
 )

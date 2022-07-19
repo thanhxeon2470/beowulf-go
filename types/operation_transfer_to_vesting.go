@@ -1,7 +1,7 @@
 package types
 
 import (
-	"beowulf-go/encoding/transaction"
+	"github.com/thanhxeon2470/beowulf-go/encoding/transaction"
 )
 
 //TransferToVestingOperation represents transfer_to_vesting operation data.

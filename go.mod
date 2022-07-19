@@ -1,6 +1,6 @@
-module beowulf-go
+module github.com/thanhxeon2470/beowulf-go
 
-go 1.18
+go 1.16
 
 require (
 	github.com/btcsuite/btcd v0.20.1-beta

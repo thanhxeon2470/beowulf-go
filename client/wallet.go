@@ -1,7 +1,7 @@
 package client
 
 import (
-	"beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/config"
 	"crypto/rand"
 	"crypto/sha512"
 	"encoding/json"

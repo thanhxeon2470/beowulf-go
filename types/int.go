@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strconv"
 	"github.com/pkg/errors"
-	"beowulf-go/encoding/transaction"
+	"github.com/thanhxeon2470/beowulf-go/encoding/transaction"
 )
 
 func unmarshalInt(data []byte) (int64, error) {

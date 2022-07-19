@@ -1,9 +1,9 @@
 package client
 
 import (
-	"beowulf-go/config"
-	"beowulf-go/encoding/wif"
-	"beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/encoding/wif"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	"crypto/sha256"
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcutil/base58"

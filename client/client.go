@@ -1,11 +1,11 @@
 package client
 
 import (
-	"beowulf-go/api"
-	"beowulf-go/config"
-	"beowulf-go/transports"
-	"beowulf-go/transports/http"
-	"beowulf-go/transports/websocket"
+	"github.com/thanhxeon2470/beowulf-go/api"
+	"github.com/thanhxeon2470/beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/transports"
+	"github.com/thanhxeon2470/beowulf-go/transports/http"
+	"github.com/thanhxeon2470/beowulf-go/transports/websocket"
 	"github.com/pkg/errors"
 	"net/url"
 )

@@ -4,7 +4,7 @@
 package transactions
 
 import (
-	"beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/config"
 	
 	// Stdlib
 	"bytes"
@@ -12,8 +12,8 @@ import (
 	"encoding/hex"
 	"time"
 	// RPC
-	"beowulf-go/encoding/transaction"
-	"beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/encoding/transaction"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	// Vendor
 	"github.com/pkg/errors"
 )

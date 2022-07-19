@@ -1,8 +1,8 @@
 package http
 
 import (
-	"beowulf-go/config"
-	"beowulf-go/types"
+	"github.com/thanhxeon2470/beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	"bytes"
 	"encoding/json"
 	"fmt"
