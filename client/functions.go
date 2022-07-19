@@ -80,6 +80,28 @@ func (client *Client) GetBalance(account, tokenName string, decimals uint8) (*st
 	return client.API.GetBalance(account, tokenName, decimals)
 }
 
+func (client *Client) FromSideToMainBlockTest(fromName, content, fee string) (*OperResp, error) {
+	validate := ValidateFee(fee, config.MIN_TRANSACTION_FEE)
+	if validate == false {
+		return nil, errors.New("Fee is not valid")
+	}
+	var owners []string
+	owners = append(owners, fromName)
+
+	var scoperation string
+	scoperation = content //fmt.Sprintf("{\"contractName\":\"nft\",\"contractAction\":\"updateName\",\"contractPayload\":{\"symbol\":\"%s\",\"name\":\"%s\"}}", symbol, name)
+	var trx []types.Operation
+	tx := &types.SmartContractOperation{
+		RequiredOwners: owners,
+		Scid:           "",
+		ScOperation:    scoperation,
+		Fee:            fee,
+	}
+	trx = append(trx, tx)
+	resp, err := client.SendTrx(trx, "")
+	return &OperResp{NameOper: "SmartContract", Bresp: resp}, err
+}
+
 func (client *Client) GetNFTs(symbol string, limit, offset uint32) (*api.NFTList, error) {
 	return client.API.GetNFTs(symbol, limit, offset)
 }
