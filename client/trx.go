@@ -1,7 +1,6 @@
 package client
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/thanhxeon2470/beowulf-go/api"
@@ -119,9 +118,6 @@ func (client *Client) SendTrx(strx []types.Operation, extension string) (*BResp,
 	if err != nil || txId == "" {
 		return nil, err
 	}
-	fmt.Printf("TX: %+v\n", tx)
-	fmt.Printf("TX__: %+v\n", tx.Transaction)
-	fmt.Printf("TX__: %+v\n", []interface{}{tx.Transaction})
 
 	// Sending a transaction
 	if client.AsyncProtocol {
