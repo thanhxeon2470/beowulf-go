@@ -5,15 +5,17 @@ package transactions
 
 import (
 	"github.com/thanhxeon2470/beowulf-go/config"
-	
+
 	// Stdlib
 	"bytes"
 	"crypto/sha256"
 	"encoding/hex"
 	"time"
+
 	// RPC
 	"github.com/thanhxeon2470/beowulf-go/encoding/transaction"
 	"github.com/thanhxeon2470/beowulf-go/types"
+
 	// Vendor
 	"github.com/pkg/errors"
 )
@@ -89,11 +91,7 @@ func (tx *SignedTransaction) Sign(privKeys [][]byte, chain string) (string, erro
 	if err != nil {
 		return "", err
 	}
-// 	fmt.Println("Transaction:")
-// 	fmt.Println(tx)
-// 	fmt.Println("Hex of tx:")
-// 	tmp := hex.EncodeToString(txRaw)
-// 	fmt.Println(tmp)
+
 	hashSha256 := sha256.Sum256(txRaw)
 	var txId = make([]byte, 20)
 	copy(txId, hashSha256[:20])

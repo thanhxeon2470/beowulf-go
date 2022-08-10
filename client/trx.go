@@ -1,18 +1,20 @@
 package client
 
 import (
+	"fmt"
+	"time"
+
 	"github.com/thanhxeon2470/beowulf-go/api"
 	"github.com/thanhxeon2470/beowulf-go/config"
 	"github.com/thanhxeon2470/beowulf-go/transactions"
 	"github.com/thanhxeon2470/beowulf-go/types"
-	"time"
 )
 
 var RefBlockMap = make(map[time.Time]uint32)
 
 //BResp of response when sending a transaction.
 type BResp struct {
-	ID string
+	ID      string
 	JSONTrx string
 }
 
@@ -117,6 +119,9 @@ func (client *Client) SendTrx(strx []types.Operation, extension string) (*BResp,
 	if err != nil || txId == "" {
 		return nil, err
 	}
+	fmt.Printf("TX: %+v\n", tx)
+	fmt.Printf("TX__: %+v\n", tx.Transaction)
+	fmt.Printf("TX__: %+v\n", []interface{}{tx.Transaction})
 
 	// Sending a transaction
 	if client.AsyncProtocol {

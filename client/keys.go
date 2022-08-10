@@ -1,15 +1,16 @@
 package client
 
 import (
-	"github.com/thanhxeon2470/beowulf-go/config"
-	"github.com/thanhxeon2470/beowulf-go/encoding/wif"
-	"github.com/thanhxeon2470/beowulf-go/types"
 	"crypto/sha256"
+	"reflect"
+
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcutil/base58"
 	"github.com/pkg/errors"
+	"github.com/thanhxeon2470/beowulf-go/config"
+	"github.com/thanhxeon2470/beowulf-go/encoding/wif"
+	"github.com/thanhxeon2470/beowulf-go/types"
 	"golang.org/x/crypto/ripemd160"
-	"reflect"
 )
 
 var (
@@ -33,6 +34,7 @@ func init() {
 	OpTypeKey["account_supernode_vote"] = []string{"owner"}
 	OpTypeKey["smt_create"] = []string{"owner"}
 	OpTypeKey["smart_contract"] = []string{"owner"}
+	OpTypeKey["check_sidechain"] = []string{"owner"}
 }
 
 func HasElem(s interface{}, elem interface{}) bool {
