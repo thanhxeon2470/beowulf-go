@@ -65,7 +65,6 @@ func (caller *Transport) Call(method string, args []interface{}, reply interface
 	if err != nil {
 		return err
 	}
-	fmt.Printf("==========================\nrequest\n%s\n", reqBody)
 
 	//resp, err := caller.client.Post(caller.Url, "application/json", bytes.NewBuffer(reqBody))
 	req, err := http.NewRequest("POST", caller.Url, bytes.NewBuffer(reqBody))
